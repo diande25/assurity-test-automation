@@ -1,0 +1,10 @@
+jsonlines
+jsonschema
+requests
+robotframework
+robotframework-requests
+robotframework-selenium2library
+robotframework-seleniumlibrary
+robotframework-sshlibrary
+selenium
+urllib3
