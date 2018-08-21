@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.0.4 (Python 3.7.0 on win32)" generated="20180821 13:42:16.174">
+<suite id="s1" name="UAT TMSandbox" source="C:\Users\Asus\assurity-test-automation\assurity\api\testcases\UAT_TMSandbox.robot">
+<test id="s1-t1" name="A user should be able to check if category name is equal to Carbon credits">
+<kw name="Given A user wants to retrieve the category details" library="Categories">
+<msg timestamp="20180821 13:42:16.296" level="INFO">Request URL: https://api.tmsandbox.co.nz/v1/Categories/6327/Details.json?catalogue=false</msg>
+<status status="PASS" starttime="20180821 13:42:16.295" endtime="20180821 13:42:16.296"></status>
+</kw>
+<kw name="When A request was made to retrieve Name in Category details" library="Categories">
+<msg timestamp="20180821 13:42:25.119" level="INFO">Category Name: Carbon credits</msg>
+<status status="PASS" starttime="20180821 13:42:16.297" endtime="20180821 13:42:25.119"></status>
+</kw>
+<kw name="Then Return a successful status response if Name is set to Carbon credits" library="Categories">
+<msg timestamp="20180821 13:42:25.121" level="INFO">Actual Value = Carbon credits  :  Expected Value = Carbon credits
+Actual Value = application/json  :  Expected Value = application/json
+Actual Value = 200  :  Expected Value = 200
+Schema validation passed</msg>
+<status status="PASS" starttime="20180821 13:42:25.120" endtime="20180821 13:42:25.121"></status>
+</kw>
+<doc>As a user I should be able to check if category name is equal to Carbon credits supplying a valid information</doc>
+<tags>
+<tag>acceptance-test</tag>
+<tag>category</tag>
+<tag>name</tag>
+<tag>positive</tag>
+</tags>
+<status status="PASS" starttime="20180821 13:42:16.294" endtime="20180821 13:42:25.121" critical="yes"></status>
+</test>
+<test id="s1-t2" name="A user should be able to check if a category can be relisted">
+<kw name="Given A user wants to retrieve the category details" library="Categories">
+<msg timestamp="20180821 13:42:25.125" level="INFO">Request URL: https://api.tmsandbox.co.nz/v1/Categories/6327/Details.json?catalogue=false</msg>
+<status status="PASS" starttime="20180821 13:42:25.124" endtime="20180821 13:42:25.125"></status>
+</kw>
+<kw name="When A request was made to check if category can be relisted" library="Categories">
+<msg timestamp="20180821 13:42:34.187" level="INFO">CanRelist: True</msg>
+<status status="PASS" starttime="20180821 13:42:25.125" endtime="20180821 13:42:34.188"></status>
+</kw>
+<kw name="Then Return a successful status response if category can be relisted" library="Categories">
+<msg timestamp="20180821 13:42:34.195" level="INFO">Actual Value = True  :  Expected Value = True
+Actual Value = application/json  :  Expected Value = application/json
+Actual Value = 200  :  Expected Value = 200
+Schema validation passed</msg>
+<status status="PASS" starttime="20180821 13:42:34.194" endtime="20180821 13:42:34.195"></status>
+</kw>
+<doc>As a user I should be able to go into category details if it is can be relisted</doc>
+<tags>
+<tag>acceptance-test</tag>
+<tag>canrelist</tag>
+<tag>category</tag>
+<tag>positive</tag>
+</tags>
+<status status="PASS" starttime="20180821 13:42:25.122" endtime="20180821 13:42:34.200" critical="yes"></status>
+</test>
+<test id="s1-t3" name="A user should be able to check if the description of the promo contains 2x larger image">
+<kw name="Given A user wants to retrieve the category details" library="Categories">
+<msg timestamp="20180821 13:42:34.203" level="INFO">Request URL: https://api.tmsandbox.co.nz/v1/Categories/6327/Details.json?catalogue=false</msg>
+<status status="PASS" starttime="20180821 13:42:34.203" endtime="20180821 13:42:34.203"></status>
+</kw>
+<kw name="When A request was made to retrieve the description of the Gallery under Promotions" library="Categories">
+<msg timestamp="20180821 13:42:44.662" level="INFO">Promo Gallery Description: Good position in category 
+2x larger image in desktop site search results</msg>
+<status status="PASS" starttime="20180821 13:42:34.204" endtime="20180821 13:42:44.662"></status>
+</kw>
+<kw name="Then Return a successful status response if the promo description contains 2x larger image" library="Categories">
+<msg timestamp="20180821 13:42:44.665" level="INFO">Actual Value = 2x larger image  :  Expected Value = Good position in category 
+2x larger image in desktop site search results
+Actual Value = application/json  :  Expected Value = application/json
+Actual Value = 200  :  Expected Value = 200
+Schema validation passed</msg>
+<status status="PASS" starttime="20180821 13:42:44.663" endtime="20180821 13:42:44.665"></status>
+</kw>
+<doc>As a user I should be able to go into category details if the description of the promo contains 2x larger image</doc>
+<tags>
+<tag>2x larger image</tag>
+<tag>acceptance-test</tag>
+<tag>category</tag>
+<tag>gallery</tag>
+<tag>positive</tag>
+<tag>promotions</tag>
+</tags>
+<status status="PASS" starttime="20180821 13:42:34.202" endtime="20180821 13:42:44.666" critical="yes"></status>
+</test>
+<test id="s1-t4" name="A user should be able to get '400 Bad Request' error response when entering invalid query">
+<kw name="Given A user wants to retrieve the category details using an invalid query" library="Categories">
+<msg timestamp="20180821 13:42:44.670" level="INFO">Request URL: https://api.tmsandbox.co.nz/v1/Categories/6327000/Details.json?catalogue=false</msg>
+<status status="PASS" starttime="20180821 13:42:44.669" endtime="20180821 13:42:44.670"></status>
+</kw>
+<kw name="When A request was made to retrieve Category details" library="Categories">
+<msg timestamp="20180821 13:42:58.213" level="INFO">&lt;Response [400]&gt;</msg>
+<status status="PASS" starttime="20180821 13:42:44.670" endtime="20180821 13:42:58.214"></status>
+</kw>
+<kw name="Then Return an error status 400 Bad Request" library="Categories">
+<msg timestamp="20180821 13:42:58.214" level="INFO">Actual Value = 400  :  Expected Value = 400</msg>
+<status status="PASS" starttime="20180821 13:42:58.214" endtime="20180821 13:42:58.214"></status>
+</kw>
+<doc>As a user I should be able to get '400 Bad Request' error when entering invalid query</doc>
+<tags>
+<tag>acceptance-test</tag>
+<tag>bad request</tag>
+<tag>category</tag>
+<tag>invalid syntax</tag>
+<tag>negative</tag>
+</tags>
+<status status="PASS" starttime="20180821 13:42:44.668" endtime="20180821 13:42:58.215" critical="yes"></status>
+</test>
+<test id="s1-t5" name="A user should be able to get '401 Unauthorized' error response when entering invalid login credentials">
+<kw name="Given A user wants to retrieve the category details" library="Categories">
+<msg timestamp="20180821 13:42:58.219" level="INFO">Request URL: https://api.tmsandbox.co.nz/v1/Categories/6327/Details.json?catalogue=false</msg>
+<status status="PASS" starttime="20180821 13:42:58.218" endtime="20180821 13:42:58.219"></status>
+</kw>
+<kw name="When A request was made to retrieve Category details with invalid login credentials" library="Categories">
+<msg timestamp="20180821 13:43:17.098" level="INFO">&lt;Response [401]&gt;</msg>
+<status status="PASS" starttime="20180821 13:42:58.220" endtime="20180821 13:43:17.099"></status>
+</kw>
+<kw name="Then Return an error status 401 Unauthorized" library="Categories">
+<msg timestamp="20180821 13:43:17.099" level="INFO">Actual Value = 401  :  Expected Value = 401</msg>
+<status status="PASS" starttime="20180821 13:43:17.099" endtime="20180821 13:43:17.100"></status>
+</kw>
+<doc>As a user I should be able to get '401 Unauthorize' error when entering invalid query</doc>
+<tags>
+<tag>acceptance-test</tag>
+<tag>category</tag>
+<tag>invalid login</tag>
+<tag>negative</tag>
+<tag>unauthorized</tag>
+</tags>
+<status status="PASS" starttime="20180821 13:42:58.217" endtime="20180821 13:43:17.100" critical="yes"></status>
+</test>
+<test id="s1-t6" name="A user should be able to get '404 Not Found' error when entering broken or not existing link">
+<kw name="Given A user wants to retrieve the category details from a broken links" library="Categories">
+<msg timestamp="20180821 13:43:17.103" level="INFO">Request URL: https://api.tmsandbox.co.nz/v1/Category/6327/Details.json?catalogue=false</msg>
+<status status="PASS" starttime="20180821 13:43:17.103" endtime="20180821 13:43:17.104"></status>
+</kw>
+<kw name="When A request was made to retrieve Category details" library="Categories">
+<msg timestamp="20180821 13:43:36.596" level="INFO">&lt;Response [404]&gt;</msg>
+<status status="PASS" starttime="20180821 13:43:17.104" endtime="20180821 13:43:36.596"></status>
+</kw>
+<kw name="Then Return an error status 404 Not Found" library="Categories">
+<msg timestamp="20180821 13:43:36.597" level="INFO">Actual Value = 404  :  Expected Value = 404</msg>
+<status status="PASS" starttime="20180821 13:43:36.597" endtime="20180821 13:43:36.597"></status>
+</kw>
+<doc>As a user I should be able to get '400 Bad Request' error when entering invalid query</doc>
+<tags>
+<tag>acceptance-test</tag>
+<tag>broken link</tag>
+<tag>category</tag>
+<tag>negative</tag>
+<tag>not existing link</tag>
+</tags>
+<status status="PASS" starttime="20180821 13:43:17.102" endtime="20180821 13:43:36.598" critical="yes"></status>
+</test>
+<doc>Feature: A user should be able to retrieve category details supplying requested parameters</doc>
+<status status="PASS" starttime="20180821 13:42:16.176" endtime="20180821 13:43:36.600"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="6" fail="0">Critical Tests</stat>
+<stat pass="6" fail="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0">2x larger image</stat>
+<stat pass="6" fail="0">acceptance-test</stat>
+<stat pass="1" fail="0">bad request</stat>
+<stat pass="1" fail="0">broken link</stat>
+<stat pass="1" fail="0">canrelist</stat>
+<stat pass="6" fail="0">category</stat>
+<stat pass="1" fail="0">gallery</stat>
+<stat pass="1" fail="0">invalid login</stat>
+<stat pass="1" fail="0">invalid syntax</stat>
+<stat pass="1" fail="0">name</stat>
+<stat pass="3" fail="0">negative</stat>
+<stat pass="1" fail="0">not existing link</stat>
+<stat pass="3" fail="0">positive</stat>
+<stat pass="1" fail="0">promotions</stat>
+<stat pass="1" fail="0">unauthorized</stat>
+</tag>
+<suite>
+<stat pass="6" fail="0" id="s1" name="UAT TMSandbox">UAT TMSandbox</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
