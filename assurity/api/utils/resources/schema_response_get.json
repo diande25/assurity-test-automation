@@ -1,0 +1,63 @@
+{
+  "Categories": {
+    "get_details": {
+      "type": "object",
+      "properties": {
+        "CategoryId": {
+          "type": "integer"
+        },
+        "Name": {
+          "type": "string"
+        },
+        "Path": {
+          "type": "string"
+        },
+        "CanListAuction": {
+          "type": "boolean"
+        },
+        "CanListClassifieds": {
+          "type": "boolean"
+        },
+        "CanRelist": {
+          "type": "boolean"
+        },
+        "LegalNotice": {
+          "type": "string"
+        },
+        "DefaultDuration": {
+          "type": "integer"
+        },
+        "AllowedDurations": {
+          "type": "array"
+        },
+        "Fees": {
+          "type": "object"
+        },
+        "FreePhotoCount": {
+          "type": "integer"
+        },
+        "MaximumPhotoCount": {
+          "type": "integer"
+        },
+        "IsFreeToRelist": {
+          "type": "boolean"
+        },
+        "Promotions": {
+          "type": "array"
+        },
+        "EmbeddedContentOptions": {
+          "type": "array"
+        },
+        "MaximumTitleLength": {
+          "type": "integer"
+        },
+        "AreaOfBusiness": {
+          "type": "integer"
+        },
+        "DefaultRelistDuration": {
+          "type": "integer"
+        }
+      }
+    }
+  }
+}
