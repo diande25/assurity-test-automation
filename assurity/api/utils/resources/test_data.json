@@ -1,0 +1,19 @@
+{
+  "base_url": {
+    "tmsandbox": "https://api.tmsandbox.co.nz"
+  },
+
+  "endpoints": {
+    "get_category": "/v1/Categories/6327/Details.json?catalogue=false",
+    "get_category_invalid400": "/v1/Categories/6327000/Details.json?catalogue=false",
+    "get_category_invalid404": "/v1/Category/6327/Details.json?catalogue=false"
+  },
+
+  "expected_value": {
+    "name": "Carbon credits",
+    "can_relist": "True",
+    "promotions": "2x larger image"
+  }
+}
+
+
